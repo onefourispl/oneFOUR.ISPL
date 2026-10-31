@@ -5,7 +5,7 @@
 */
 const internships = [
   { id: "01", title: "Java Development Intern", category: "Development", duration: " UPTO 4 weeks", mode: "Remote / Online", level: "Students & Freshers", skills: "Java, OOP, SQL", description: "Build a strong foundation in Java development and explore practical software development concepts.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
-  { id: "02", title: "Python Development Intern", category: "Development", duration: " UPTO 2 Months", mode: "Remote / Online", level: "Students & Freshers", skills: "Python, Programming", description: "Strengthen your programming fundamentals and learn how Python is used to solve real-world problems.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
+  { id: "02", title: "Python Development Intern", category: "Development", duration: "UPTO 2 Months", mode: "Remote / Online", level: "Students & Freshers", skills: "Python, Programming", description: "Strengthen your programming fundamentals and learn how Python is used to solve real-world problems.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
   { id: "03", title: "Web Development Intern", category: "Development", duration: " UPTO 3 Months", mode: "Remote / Online", level: "Students & Freshers", skills: "HTML, CSS, JavaScript", description: "Learn to create responsive websites and understand the building blocks of the modern web.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
   { id: "04", title: "UI/UX Design Intern", category: "Design", duration: " UPTO 2 Months", mode: "Remote / Online", level: "Students & Freshers", skills: "Wireframes, UI Design", description: "Explore user-centred design, wireframing and the process of creating clear digital experiences.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
   { id: "05", title: "Data Analytics Intern", category: "Data", duration: " UPTO 3 Months", mode: "Remote / Online", level: "Students & Freshers", skills: "Excel, SQL, Python", description: "Discover how data can be organised, analysed and communicated to support better decisions.", applyUrl: "https://forms.gle/Ym9zvBC4hAhYNMVJ7" },
@@ -50,8 +50,8 @@ function openDetails(id) {
       <div class="detail-item"><small>Skills</small><strong>${escapeHTML(item.skills)}</strong></div>
     </div>`;
   const apply = document.getElementById("modalApply");
-  const validUrl = item.applyUrl && item.applyUrl !== "https://forms.gle/Ym9zvBC4hAhYNMVJ7";
-  apply.href = validUrl ? item.applyUrl : "mailto:onefour.ispl@gmail.com?subject=" + encodeURIComponent("https://forms.gle/Ym9zvBC4hAhYNMVJ7" + item.title);
+  const validUrl = item.applyUrl && item.applyUrl !== "ADD_GOOGLE_FORM_URL_HERE";
+  apply.href = validUrl ? item.applyUrl : "mailto:onefour.ispl@gmail.com?subject=" + encodeURIComponent("Google Form link needed - " + item.title);
   apply.innerHTML = validUrl ? 'Apply for this internship <span>↗</span>' : 'Request application link <span>↗</span>';
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
